@@ -4,5 +4,3 @@ eval "$(conda shell.bash hook)"
 conda activate ./venv
 pip install pip==21.3.1
 pip install -r requirements.txt
-mkdocs build
-htmlark docs_html/print_page.html -o documentation.html

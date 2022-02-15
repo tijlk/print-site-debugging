@@ -1,7 +1,7 @@
 
 # Project specifics
-site_name: Insight
-repo_name: 'trxcat-on-sda'
+site_name: Foo
+repo_name: 'bar'
 
 theme:
     name: material
