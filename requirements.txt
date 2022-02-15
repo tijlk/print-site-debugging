@@ -1,0 +1,4 @@
+mkdocs-material==8.1.11
+mkdocs-print-site-plugin==2.3
+htmlark==1.0.0
+lightgallery==0.5

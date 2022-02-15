@@ -1,0 +1,41 @@
+
+<!-- This adds support for mkdocs-git-authors-plugin to mkdocs-material theme -->
+{% extends "base.html" %}
+
+{% block styles %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ base_url }}/assets/theme/css/lightgallery.min.css">
+{% endblock styles %}
+
+{% block libs %}
+    {{ super() }}
+    <script src="{{ base_url }}/assets/theme/js/lightgallery.min.js"></script>
+{% endblock libs %}
+
+{% block scripts %}
+    {{ super() }}
+    <script>
+    var elements = document.getElementsByClassName("lightgallery");
+    for(var i=0; i<elements.length; i++) {
+       lightGallery(elements[i]);
+    }
+    </script>
+{% endblock scripts %}
+
+{% block disqus %}
+    <div class="md-source-date">
+    <small>
+        Authors: {{ git_page_authors }}
+    </small>
+  </div>
+    {% include "partials/integrations/disqus.html" %}
+{% endblock %}
+
+{% block content %}
+{% if page.url_to_print_page %}
+    <a href="{{ page.url_to_print_page }}" title="Print Site" class="md-content__button md-icon">
+        {% include ".icons/material/printer.svg" %}
+    </a>
+{% endif %}
+{{ super() }}
+{% endblock content %}

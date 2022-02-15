@@ -1,0 +1,26 @@
+
+# Project specifics
+site_name: Insight
+repo_name: 'trxcat-on-sda'
+
+theme:
+    name: material
+    custom_dir: docs/assets/theme/
+
+
+plugins:
+    - search
+    - print-site:
+        add_to_navigation: true
+        enabled: !ENV [ENABLED_PRINT_SITE, True]
+        add_cover_page: true
+        toc_depth: 4
+        add_print_site_banner: true
+
+markdown_extensions:
+    - lightgallery
+
+# Lots of other settings
+edit_uri: edit/master/docs/
+site_dir: docs_html/
+use_directory_urls: false
